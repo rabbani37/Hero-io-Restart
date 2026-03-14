@@ -33,7 +33,7 @@ const Navbar = () => {
                             {navlist}
                         </ul>
                     </div>
-                    <Link className="flex items-center gap-2">
+                    <Link className="flex items-center gap-1">
                     <img className="w-8" src={logo} alt="" />
                     <p className="font-bold text-xl bg-linear-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent
                     ">Hero.io</p>
@@ -46,7 +46,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end ">
                     
-                    <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white"><Github strokeWidth={1.7} /> Contribute</a>
+                    <Link to={'https://github.com/rabbani37'} target="true" className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white"><Github strokeWidth={1.7} /> Contribute</Link>
                 </div>
             </div>
         </div>
