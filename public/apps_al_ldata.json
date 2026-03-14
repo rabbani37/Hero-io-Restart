@@ -1,0 +1,290 @@
+[
+{
+"image":"https://cdn-icons-png.flaticon.com/512/733/733585.png",
+"title":"WhatsApp Secure Chat Messenger",
+"companyName":"Meta",
+"id":1,
+"description":"Private messaging and calling app used by billions worldwide.",
+"size":85,
+"reviews":18245000,
+"ratingAvg":4.3,
+"downloads":5000000,
+"ratings":[
+{"name":"1 star","count":900000},
+{"name":"2 star","count":700000},
+{"name":"3 star","count":2100000},
+{"name":"4 star","count":6200000},
+{"name":"5 star","count":8345000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/2111/2111463.png",
+"title":"Instagram Photo Video Sharing",
+"companyName":"Meta",
+"id":2,
+"description":"Share photos reels and stories with your friends and followers.",
+"size":95,
+"reviews":15800000,
+"ratingAvg":4.4,
+"downloads":30000000,
+"ratings":[
+{"name":"1 star","count":600000},
+{"name":"2 star","count":500000},
+{"name":"3 star","count":2000000},
+{"name":"4 star","count":4800000},
+{"name":"5 star","count":7900000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/733/733547.png",
+"title":"Facebook Social Network Platform",
+"companyName":"Meta",
+"id":3,
+"description":"Connect with friends and share updates with the world.",
+"size":90,
+"reviews":20300000,
+"ratingAvg":4.1,
+"downloads":5000000000,
+"ratings":[
+{"name":"1 star","count":1500000},
+{"name":"2 star","count":1100000},
+{"name":"3 star","count":3500000},
+{"name":"4 star","count":6200000},
+{"name":"5 star","count":7600000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
+"title":"YouTube Online Video Streaming",
+"companyName":"Google",
+"id":4,
+"description":"Watch like and share videos from creators worldwide.",
+"size":110,
+"reviews":32000000,
+"ratingAvg":4.2,
+"downloads":10000000000,
+"ratings":[
+{"name":"1 star","count":3000000},
+{"name":"2 star","count":2000000},
+{"name":"3 star","count":6000000},
+{"name":"4 star","count":9500000},
+{"name":"5 star","count":11500000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/174/174872.png",
+"title":"Spotify Music Podcast Streaming",
+"companyName":"Spotify",
+"id":5,
+"description":"Listen to millions of songs and podcasts anytime.",
+"size":74,
+"reviews":6450000,
+"ratingAvg":4.5,
+"downloads":1000000000,
+"ratings":[
+{"name":"1 star","count":250000},
+{"name":"2 star","count":200000},
+{"name":"3 star","count":800000},
+{"name":"4 star","count":2300000},
+{"name":"5 star","count":2900000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/732/732200.png",
+"title":"Gmail Smart Email Service",
+"companyName":"Google",
+"id":6,
+"description":"Secure email service with smart inbox organization.",
+"size":70,
+"reviews":10200000,
+"ratingAvg":4.4,
+"downloads":10000000000,
+"ratings":[
+{"name":"1 star","count":600000},
+{"name":"2 star","count":400000},
+{"name":"3 star","count":1500000},
+{"name":"4 star","count":3600000},
+{"name":"5 star","count":4100000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/300/300221.png",
+"title":"Google Drive Cloud Storage",
+"companyName":"Google",
+"id":7,
+"description":"Store and share files securely in the cloud.",
+"size":65,
+"reviews":4800000,
+"ratingAvg":4.6,
+"downloads":5000000000,
+"ratings":[
+{"name":"1 star","count":150000},
+{"name":"2 star","count":120000},
+{"name":"3 star","count":500000},
+{"name":"4 star","count":1500000},
+{"name":"5 star","count":2530000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/888/888879.png",
+"title":"Netflix Movies Series Streaming",
+"companyName":"Netflix",
+"id":8,
+"description":"Watch movies and TV shows from around the world.",
+"size":120,
+"reviews":8900000,
+"ratingAvg":4.3,
+"downloads":1000000000,
+"ratings":[
+{"name":"1 star","count":450000},
+{"name":"2 star","count":350000},
+{"name":"3 star","count":1200000},
+{"name":"4 star","count":3100000},
+{"name":"5 star","count":3800000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/5968/5968841.png",
+"title":"TikTok Short Video Platform",
+"companyName":"ByteDance",
+"id":9,
+"description":"Create and watch short entertaining videos.",
+"size":99,
+"reviews":27000000,
+"ratingAvg":4.4,
+"downloads":3000000000,
+"ratings":[
+{"name":"1 star","count":1200000},
+{"name":"2 star","count":800000},
+{"name":"3 star","count":3500000},
+{"name":"4 star","count":9200000},
+{"name":"5 star","count":12300000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/2504/2504914.png",
+"title":"Telegram Fast Secure Messenger",
+"companyName":"Telegram",
+"id":10,
+"description":"Fast messaging app focused on speed and security.",
+"size":65,
+"reviews":11000000,
+"ratingAvg":4.6,
+"downloads":1000000000,
+"ratings":[
+{"name":"1 star","count":300000},
+{"name":"2 star","count":200000},
+{"name":"3 star","count":900000},
+{"name":"4 star","count":3200000},
+{"name":"5 star","count":6400000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/3670/3670151.png",
+"title":"Zoom Online Meeting Platform",
+"companyName":"Zoom",
+"id":11,
+"description":"Video meetings online classes and team collaboration.",
+"size":95,
+"reviews":4200000,
+"ratingAvg":4.3,
+"downloads":1000000000,
+"ratings":[
+{"name":"1 star","count":200000},
+{"name":"2 star","count":180000},
+{"name":"3 star","count":700000},
+{"name":"4 star","count":1500000},
+{"name":"5 star","count":1620000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/888/888857.png",
+"title":"Uber Ride Booking Service",
+"companyName":"Uber",
+"id":12,
+"description":"Book rides and travel around the city easily.",
+"size":78,
+"reviews":5200000,
+"ratingAvg":4.2,
+"downloads":1000000,
+"ratings":[
+{"name":"1 star","count":450000},
+{"name":"2 star","count":300000},
+{"name":"3 star","count":1000000},
+{"name":"4 star","count":1800000},
+{"name":"5 star","count":1650000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/732/732208.png",
+"title":"Google Maps Navigation App",
+"companyName":"Google",
+"id":13,
+"description":"Navigate anywhere with real time GPS directions.",
+"size":102,
+"reviews":15000000,
+"ratingAvg":4.3,
+"downloads":10000000000,
+"ratings":[
+{"name":"1 star","count":800000},
+{"name":"2 star","count":650000},
+{"name":"3 star","count":2600000},
+{"name":"4 star","count":5200000},
+{"name":"5 star","count":5750000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/888/888841.png",
+"title":"Amazon Online Shopping Marketplace",
+"companyName":"Amazon",
+"id":14,
+"description":"Shop millions of products online with fast delivery.",
+"size":88,
+"reviews":7800000,
+"ratingAvg":4.4,
+"downloads":500000000,
+"ratings":[
+{"name":"1 star","count":320000},
+{"name":"2 star","count":250000},
+{"name":"3 star","count":1200000},
+{"name":"4 star","count":2900000},
+{"name":"5 star","count":3130000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/732/732229.png",
+"title":"Google Photos Backup Manager",
+"companyName":"Google",
+"id":15,
+"description":"Backup and organize your photos automatically.",
+"size":80,
+"reviews":9000000,
+"ratingAvg":4.5,
+"downloads":5000000000,
+"ratings":[
+{"name":"1 star","count":300000},
+{"name":"2 star","count":200000},
+{"name":"3 star","count":900000},
+{"name":"4 star","count":3000000},
+{"name":"5 star","count":4600000}
+]
+},
+{
+"image":"https://cdn-icons-png.flaticon.com/512/888/888846.png",
+"title":"Airbnb Travel Booking Platform",
+"companyName":"Airbnb",
+"id":16,
+"description":"Book unique homes and experiences around the world.",
+"size":92,
+"reviews":3600000,
+"ratingAvg":4.4,
+"downloads":500000000,
+"ratings":[
+{"name":"1 star","count":150000},
+{"name":"2 star","count":120000},
+{"name":"3 star","count":500000},
+{"name":"4 star","count":1200000},
+{"name":"5 star","count":1630000}
+]
+}
+]
