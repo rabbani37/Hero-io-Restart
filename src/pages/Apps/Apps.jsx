@@ -9,12 +9,12 @@ const Apps = () => {
     const allApps = useDataLoadHooks();
     //  const { title, image, downloads, ratingAvg } = allApps;
     return (
-        <div>
+        <div className="px-10 mb-5">
             <div className="text-center py-10 max-w-3xl mx-auto">
-                <h2 className="text-5xl  font-bold mb-2 mt-10">All Apps</h2>
+                <h2 className="text-5xl  font-bold mb-5 mt-10">All Apps</h2>
                 <p className="text-gray-500">All your apps, now in one place. All apps in our section are neatly organized and instantly ready to use. From work to fun, manage and launch your favorites with ease.</p>
             </div>
-            <div className="md:flex justify-between items-center px-5 space-y-5 text-center mb-5">
+            <div className="md:flex justify-between items-center px-3 space-y-5 text-center mb-5">
                 <p className="text-2xl font-semibold">({allApps.length}) Apps Found</p>
                 <label className="input">
                     <Search className="text-gray-600" />
