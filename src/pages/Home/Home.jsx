@@ -16,11 +16,11 @@ const Home = () => {
                 <div>
                     <div className="text-center py-10">
                         <h2 className="text-5xl  font-bold mb-2 mt-10">Trending Apps</h2>
-                        <p className="text-gray-500">Explore All Trending Apps on the Market developed by us</p>
+                        <p className="text-gray-500">Discover the most popular apps trending now, curated to boost your productivity and fun.</p>
                     </div>
                     <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 p-3">
                         {
-                            allApps.map(app => <TrandingApp key={app.id} app={app}></TrandingApp>)
+                            allApps.sort((p,c)=>c.downloads - p.downloads).slice(0,8).map(app => <TrandingApp key={app.id} app={app}></TrandingApp>)
                         }
                     </div>
                     <div  className="flex justify-center">

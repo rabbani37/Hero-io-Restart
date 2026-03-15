@@ -7,12 +7,15 @@ import { RouterProvider } from 'react-router/dom';
 import Root from './layout/Root.jsx';
 import Home from './pages/Home/Home.jsx';
 import Apps from './pages/Apps/Apps.jsx';
+import Installation from './pages/Installation/Installation.jsx';
+import ErrorPage from './layout/NavBar/ErrorPage.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -24,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/installation",
-        element: <Apps></Apps>
+        element: <Installation></Installation>
       }
     ]
   },

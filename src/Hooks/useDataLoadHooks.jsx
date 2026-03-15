@@ -16,6 +16,8 @@ const useDataLoadHooks = () => {
         };
         appDataLoad();
     }, [])
+
+
     return appData
 };
 
