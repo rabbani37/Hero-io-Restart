@@ -11,8 +11,8 @@ const useDataLoadHooks = () => {
 
     useEffect(() => {
         const appDataLoad = async () => {
-            const res = await axios.get("apps_al_ldata.json");
-            setAppData(res.data)
+            const res = (await axios.get("/apps_al_ldata.json")).data;
+            setAppData(res)
         };
         appDataLoad();
     }, [])

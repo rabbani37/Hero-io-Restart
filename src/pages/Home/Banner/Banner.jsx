@@ -9,7 +9,7 @@ const Banner = () => {
     return (
         <div className=" md:px-20 pt-20 px-5">
             <div className=" text-center max-w-4xl mx-auto">
-                <h1 className="font-black md:text-7xl text-5xl bg-linear-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">We Build<br /> Productive Apps</h1>
+                <h1 className="font-black md:text-7xl text-5xl ">We Build<br /> <span className="bg-linear-to-br from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">Productive</span> Apps</h1>
                 <p className="text-gray-600 pt-4 pb-5">At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
                 <div className="space-x-5">
                     <button className="btn ">

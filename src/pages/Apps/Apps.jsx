@@ -4,6 +4,7 @@ import AppDetails from "./AppDetails";
 import { FaDownload } from "react-icons/fa6";
 import { IoStar } from "react-icons/io5";
 import { Search } from "lucide-react";
+import { Link } from "react-router";
 
 const Apps = () => {
     const allApps = useDataLoadHooks();
@@ -24,26 +25,28 @@ const Apps = () => {
             <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 p-3">
 
                 {
-                    allApps.map(app => <div className=" bg-base-100 shadow-sm rounded flex flex-col
+                    allApps.map(app => <Link to={`/appDetails/${app.id}`}>
+                        <div className=" bg-base-100 shadow-sm rounded flex flex-col
              transform transition-transform duration-700  hover:scale-103  hover:shadow-xl
             ">
-                        <figure className="p-3 text-center  w-1/2 mx-auto flex-1 ">
-                            <img
-                                src={app.image}
-                                alt={app.title}
-                                className="rounded   " />
-                        </figure>
-                        <div className=" px-4 mb-5 ">
-                            <h2 className="text-xl font-bold">{app.title}</h2>
-                            <div className=" flex justify-between items-center mt-3">
-                                <div className="badge badge-soft badge-success rounded"><FaDownload />
-                                    {new Intl.NumberFormat("en-us", { notation: "compact" }).format(app?.downloads)}
-                                </div>
+                            <figure className="p-3 text-center  w-1/2 mx-auto flex-1 ">
+                                <img
+                                    src={app.image}
+                                    alt={app.title}
+                                    className="rounded   " />
+                            </figure>
+                            <div className=" px-4 mb-5 ">
+                                <h2 className="text-xl font-bold">{app.title}</h2>
+                                <div className=" flex justify-between items-center mt-3">
+                                    <div className="badge badge-soft badge-success rounded"><FaDownload />
+                                        {new Intl.NumberFormat("en-us", { notation: "compact" }).format(app?.downloads)}
+                                    </div>
 
-                                <div className="badge badge-soft badge-warning rounded"> < IoStar /> {app.ratingAvg}</div>
+                                    <div className="badge badge-soft badge-warning rounded"> < IoStar /> {app.ratingAvg}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>)
+                    </Link>)
                 }
             </div>
         </div>

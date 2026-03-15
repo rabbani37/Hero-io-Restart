@@ -9,6 +9,7 @@ import Home from './pages/Home/Home.jsx';
 import Apps from './pages/Apps/Apps.jsx';
 import Installation from './pages/Installation/Installation.jsx';
 import ErrorPage from './layout/NavBar/ErrorPage.jsx';
+import AppDetails from './pages/Apps/AppDetails.jsx';
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/installation",
         element: <Installation></Installation>
+      },
+      {
+        path:"/appDetails/:Id",
+        element:<AppDetails></AppDetails>
       }
     ]
   },

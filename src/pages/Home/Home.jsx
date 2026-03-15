@@ -7,7 +7,7 @@ import State from "./State/State";
 const Home = () => {
     const allApps = useDataLoadHooks();
 
-
+// console.log(allApps)
     return (
         <div className="space-y-20 mb-5">
             <div>
