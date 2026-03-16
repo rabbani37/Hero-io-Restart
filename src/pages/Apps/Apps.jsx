@@ -4,15 +4,14 @@ import AppDetails from "./AppDetails";
 import { FaDownload } from "react-icons/fa6";
 import { IoStar } from "react-icons/io5";
 import { Search } from "lucide-react";
-import { Link, useLocation, useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import ErrorApp from '../../assets/App-Error.png'
 
 const Apps = () => {
 
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
-    const location = useLocation()
-
+    
     const allApps = useDataLoadHooks();
     const filterdApp = allApps.filter(app => (app.title + app.companyName).toLowerCase().split('').join('').trim().includes(search.toLowerCase().trim()))
 

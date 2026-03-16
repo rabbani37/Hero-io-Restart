@@ -27,7 +27,7 @@ const handleRemoveFormLS = (id) => {
     const storedAppLS = getLSapp()
     const remainingApp = storedAppLS.filter(a => a !== parseInt(id))
     localStorage.setItem("apps", JSON.stringify(remainingApp))
-
+    toast.info("Uninstalled this app")
 }
 
-export { saveAppLS, getLSapp,handleRemoveFormLS }
+export { saveAppLS, getLSapp, handleRemoveFormLS }

@@ -5,14 +5,16 @@ import { IoStar } from "react-icons/io5";
 import useDataLoadHooks from "../../Hooks/useDataLoadHooks";
 import { getLSapp, handleRemoveFormLS } from "../../LocalStor/localStore";
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 
 const Installation = () => {
+const [sortApp,setSortApp]=useState()
 
-    
     const alldata = useDataLoadHooks();
     const storeLS = getLSapp()
     const apps = alldata.filter(app => storeLS.includes(app.id))
     const [appsR, setAppsR] = useState(apps)
+    
     if (!appsR) {
         return <span>Loading...</span>
     }
@@ -21,12 +23,20 @@ const Installation = () => {
     const handleUnistall = (id) => {
         const remainingAp = apps.filter(ap => ap.id !== id)
         setAppsR(remainingAp)
-        console.log(remainingAp)
         handleRemoveFormLS(id)
     }
+    const handleLowToHeigh = () => {
+        const filtered = apps.sort((p, c) => p.downloads - c.downloads)
+        setSortApp(filtered)
+    }
+    const handleHeighToLow = () => {
+        const filtered = apps.sort((p, c) => c.downloads - p.downloads)
+        setSortApp(filtered)
+    }
+    console.log(sortApp)
 
-    // const handle
     const appLS = !appsR ? appsR : apps
+    const shorted= sortApp?sortApp:appLS
 
     return (
         <div className="p-10 bg-gray-100">
@@ -40,8 +50,8 @@ const Installation = () => {
                     <div tabIndex={0} role="button" className="btn m-1 btn-outline">Sort By Size <IoMdArrowDropdown />
                     </div>
                     <ul tabIndex="-1" className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 2</a></li>
+                        <li><a onClick={handleHeighToLow}>High-Low</a></li>
+                        <li><a onClick={handleLowToHeigh}>Low-Heigh</a></li>
                     </ul>
                 </div>
             </div>
@@ -50,7 +60,7 @@ const Installation = () => {
             <div className="space-y-5">
 
                 {
-                    appLS.map(app => <div key={app?.id} className="bg-white rounded p-5 flex justify-between items-center ">
+                    shorted.map(app => <div key={app?.id} className="bg-white rounded p-5 flex justify-between items-center ">
                         <div className="flex items-center gap-5">
                             <div className="bg-gray-100 p-2 rounded">
                                 <img className="w-8 h-8" src={app?.image} alt="" />
@@ -69,10 +79,11 @@ const Installation = () => {
                         <button onClick={() => handleUnistall(app?.id)} className="btn btn-success text-white">Unistall</button>
                     </div>)
 
-            
+
                 }
 
-        </div>
+            </div>
+            <ToastContainer />
 
         </div >
     );
