@@ -12,7 +12,7 @@ const Navbar = () => {
 
     <li><NavLink to={"/apps"} className={({isActive})=> `active:text-[#9F62F2] active:bg-white font-semibold ${isActive?"font-semibold  text-[#9F62F2]":""}`} >Apps</NavLink></li>
 
-    <li><NavLink to={"/installation"} className={({isActive})=> `active:text-[#9F62F2] active:bg-white font-semibold ${isActive?"font-semibold  text-[#9F62F2]":""}`} >Installation</NavLink></li>
+    <li><NavLink to={"/myinstallation"} className={({isActive})=> `active:text-[#9F62F2] active:bg-white font-semibold ${isActive?"font-semibold  text-[#9F62F2]":""}`} >My Installation</NavLink></li>
     </>
 
 

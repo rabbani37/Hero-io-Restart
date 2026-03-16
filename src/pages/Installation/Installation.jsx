@@ -4,25 +4,23 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { IoStar } from "react-icons/io5";
 import useDataLoadHooks from "../../Hooks/useDataLoadHooks";
 import { getLSapp, handleRemoveFormLS } from "../../LocalStor/localStore";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import ErrorApp from '../../assets/App-Error.png'
 import { Link, useNavigate } from "react-router";
+import AppContext from "../../contextApp/AppContextSepareted";
+import { Oval } from "react-loader-spinner";
 
 const Installation = () => {
-    const [sortApp, setSortApp] = useState()
 
-    const alldata = useDataLoadHooks();
+    const { appData, spinner } = useContext(AppContext);
+
+    const [sortApp, setSortApp] = useState()
     const storeLS = getLSapp()
-    const apps = alldata.filter(app => storeLS.includes(app.id))
+    const apps = appData.filter(app => storeLS.includes(app.id))
     const [appsR, setAppsR] = useState(apps)
 
     const navigate = useNavigate()
-
-    if (!appsR) {
-        return <span>Loading...</span>
-    }
-
 
     const handleUnistall = (id) => {
         const remainingAp = apps.filter(ap => ap.id !== id)
@@ -64,7 +62,24 @@ const Installation = () => {
 
             <div className="space-y-5">
 
-                {shorted.length !== 0 || shorted.length <0 ?
+
+                <div className="flex justify-center">
+                    {
+                        spinner && <span className=" my-10  ">
+                            <Oval
+                                visible={true}
+                                height="80"
+                                width="80"
+                                color="#4fa94d"
+                                ariaLabel="oval-loading"
+                                wrapperStyle={{}}
+                                wrapperClass=""
+                            />
+                        </span>
+                    }
+                </div>
+
+                {shorted.length !== 0 || shorted.length < 0 ?
                     shorted.map(app => <div key={app?.id} className="bg-white rounded p-5 flex justify-between items-center ">
                         <div className="flex items-center gap-5">
                             <div className="bg-gray-100 p-2 rounded">

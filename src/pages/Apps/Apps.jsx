@@ -1,24 +1,22 @@
-import { Suspense, useState } from "react";
-import useDataLoadHooks from "../../Hooks/useDataLoadHooks";
+import { Suspense, useContext, useState } from "react";
 import AppDetails from "./AppDetails";
 import { FaDownload } from "react-icons/fa6";
 import { IoStar } from "react-icons/io5";
 import { Search } from "lucide-react";
 import { Link, useNavigate } from "react-router";
 import ErrorApp from '../../assets/App-Error.png'
+import AppContext from "../../contextApp/AppContextSepareted";
+import { Oval } from "react-loader-spinner";
 
 const Apps = () => {
+    const { appData, spinner } = useContext(AppContext);
 
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
-    
-    const allApps = useDataLoadHooks();
-    const filterdApp = allApps.filter(app => (app.title + app.companyName).toLowerCase().split('').join('').trim().includes(search.toLowerCase().trim()))
 
 
-    if (!allApps) {
-        return <span>Loading...</span>
-    }
+    const filterdApp = appData.filter(app => (app.title + app.companyName).toLowerCase().split('').join('').trim().includes(search.toLowerCase().trim()))
+
 
 
     console.log(filterdApp.length)
@@ -32,9 +30,26 @@ const Apps = () => {
                 <p className="text-2xl font-semibold">({filterdApp.length}) Apps Found</p>
                 <label className="input">
                     <Search className="text-gray-600" />
-                    <input onChange={(e) => setSearch(e.target.value)} type="search" required placeholder="Search by title or chat, video, company " />
+                    <input onChange={(e) => setSearch(e.target.value)} type="search" required placeholder="Search by title or 'chat', 'video', 'streaming' " />
                 </label>
             </div>
+
+            <div className="flex justify-center">
+                {
+                    spinner && <span className=" my-10  ">
+                        <Oval
+                            visible={true}
+                            height="80"
+                            width="80"
+                            color="#4fa94d"
+                            ariaLabel="oval-loading"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                        />
+                    </span>
+                }
+            </div>
+
             {
                 !filterdApp.length <= 0 ?
 
@@ -72,7 +87,7 @@ const Apps = () => {
                         <div className='text-center space-y-5'>
                             <h1 className='text-3xl font-bold'>OPPS!! APP NOT FOUND</h1>
                             <p className='text-gray-400 font-semibold'>The App you are requesting is not found on our system.  please try another apps</p>
-                            <Link onClick={() => navigate( window.location.reload())}  className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white"> Go Back</Link>
+                            <Link onClick={() => navigate(window.location.reload())} className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white"> Go Back</Link>
                         </div>
 
                     </div>

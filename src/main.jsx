@@ -10,13 +10,14 @@ import Apps from './pages/Apps/Apps.jsx';
 import Installation from './pages/Installation/Installation.jsx';
 import ErrorPage from './layout/NavBar/ErrorPage.jsx';
 import AppDetails from './pages/Apps/AppDetails.jsx';
+import ContextAppComponent from './contextApp/ContextAppComponent.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -27,12 +28,12 @@ const router = createBrowserRouter([
         element: <Apps></Apps>
       },
       {
-        path: "/installation",
+        path: "/myinstallation",
         element: <Installation></Installation>
       },
       {
-        path:"/appDetails/:Id",
-        element:<AppDetails></AppDetails>
+        path: "/appDetails/:Id",
+        element: <AppDetails></AppDetails>
       }
     ]
   },
@@ -41,7 +42,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    
+    <ContextAppComponent>
+      <RouterProvider router={router} />,
+    </ContextAppComponent>
 
   </StrictMode>,
 )
