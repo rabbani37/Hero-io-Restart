@@ -5,15 +5,17 @@ import { FaDownload } from "react-icons/fa6";
 import { Bar, CartesianGrid, ComposedChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { getLSapp, saveAppLS } from "../../LocalStor/localStore";
 import { ToastContainer } from "react-toastify";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import AppContext from "../../contextApp/AppContextSepareted";
+import { Oval } from "react-loader-spinner";
 
 const AppDetails = () => {
 
     const [installed, setInstalled] = useState(false)
 
-    const apps = useDataLoadHooks();
+    const { appData, spinner } = useContext(AppContext);
     const { Id } = useParams()
-    const app = apps?.find(a => a.id === parseInt(Id));
+    const app = appData?.find(a => a.id === parseInt(Id));
     const barData = app?.ratings;
 
 
@@ -38,6 +40,23 @@ const AppDetails = () => {
 
     return (
         <div className="bg-gray-100 p-10">
+
+            <div className="flex justify-center">
+                {
+                    spinner && <span className=" my-10  ">
+                        <Oval
+                            visible={true}
+                            height="80"
+                            width="80"
+                            color="#4fa94d"
+                            ariaLabel="oval-loading"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                        />
+                    </span>
+                }
+            </div>
+
             <div className="w-full  h-auto   md:flex items-center gap-6 ">
 
 

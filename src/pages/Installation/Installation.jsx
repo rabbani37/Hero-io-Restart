@@ -2,7 +2,6 @@
 import { FaDownload } from "react-icons/fa6";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { IoStar } from "react-icons/io5";
-import useDataLoadHooks from "../../Hooks/useDataLoadHooks";
 import { getLSapp, handleRemoveFormLS } from "../../LocalStor/localStore";
 import { useContext, useState } from "react";
 import { ToastContainer } from "react-toastify";
@@ -98,7 +97,7 @@ const Installation = () => {
 
                         <button onClick={() => handleUnistall(app?.id)} className="btn btn-success text-white">Unistall</button>
                     </div>)
-                    : < div className=' p-20'>
+                    : < div className=' p-5'>
                         <div className='flex  justify-center items-center'>
                             <img className='w-1/4' src={ErrorApp} alt="" />
                         </div>
