@@ -6,15 +6,19 @@ import useDataLoadHooks from "../../Hooks/useDataLoadHooks";
 import { getLSapp, handleRemoveFormLS } from "../../LocalStor/localStore";
 import { useState } from "react";
 import { ToastContainer } from "react-toastify";
+import ErrorApp from '../../assets/App-Error.png'
+import { Link, useNavigate } from "react-router";
 
 const Installation = () => {
-const [sortApp,setSortApp]=useState()
+    const [sortApp, setSortApp] = useState()
 
     const alldata = useDataLoadHooks();
     const storeLS = getLSapp()
     const apps = alldata.filter(app => storeLS.includes(app.id))
     const [appsR, setAppsR] = useState(apps)
-    
+
+    const navigate = useNavigate()
+
     if (!appsR) {
         return <span>Loading...</span>
     }
@@ -33,15 +37,16 @@ const [sortApp,setSortApp]=useState()
         const filtered = apps.sort((p, c) => c.downloads - p.downloads)
         setSortApp(filtered)
     }
-    console.log(sortApp)
+
 
     const appLS = !appsR ? appsR : apps
-    const shorted= sortApp?sortApp:appLS
+    const shorted = sortApp ? sortApp : appLS
+    console.log(shorted)
 
     return (
         <div className="p-10 bg-gray-100">
             <div className="text-center py-10 max-w-3xl mx-auto">
-                <h2 className="text-5xl  font-bold mb-5 mt-10">Your Installed Apps</h2>
+                <h2 className="text-5xl  font-bold mb-5 mt-10">My Installed Apps</h2>
                 <p className="text-gray-500">View all your installed apps in one place and manage them effortlessly. Also installed apps, ready to open, update, or manage anytime.</p>
             </div>
             <div className="md:flex justify-between items-center  space-y-5 text-center mb-5">
@@ -59,7 +64,7 @@ const [sortApp,setSortApp]=useState()
 
             <div className="space-y-5">
 
-                {
+                {shorted.length !== 0 || shorted.length <0 ?
                     shorted.map(app => <div key={app?.id} className="bg-white rounded p-5 flex justify-between items-center ">
                         <div className="flex items-center gap-5">
                             <div className="bg-gray-100 p-2 rounded">
@@ -78,8 +83,17 @@ const [sortApp,setSortApp]=useState()
 
                         <button onClick={() => handleUnistall(app?.id)} className="btn btn-success text-white">Unistall</button>
                     </div>)
+                    : < div className=' p-20'>
+                        <div className='flex  justify-center items-center'>
+                            <img className='w-1/4' src={ErrorApp} alt="" />
+                        </div>
+                        <div className='text-center space-y-5'>
+                            <h1 className='text-3xl font-bold'> No apps installed yet.</h1>
+                            <p className='text-gray-400 font-semibold'>Install more apps</p>
+                            <Link onClick={() => navigate(-1)} className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white"> Go Back</Link>
+                        </div>
 
-
+                    </div>
                 }
 
             </div>
