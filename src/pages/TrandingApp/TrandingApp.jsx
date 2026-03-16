@@ -8,7 +8,9 @@ import { Link } from "react-router";
 const TrandingApp = ({ app }) => {
 
     const { id, title, image, downloads, ratingAvg } = app;
-
+    if (!app) {
+        return <span>Loading...</span>
+    }
 
     return (
 
