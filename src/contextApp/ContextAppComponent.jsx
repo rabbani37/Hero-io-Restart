@@ -16,6 +16,7 @@ const ContextAppComponent = ({ children }) => {
             .then(data => {
                 setAppData(data)
                 setSpinner(false)
+
             })
     }, [])
 
@@ -23,7 +24,8 @@ const ContextAppComponent = ({ children }) => {
 
     const appInfo = {
         appData,
-        spinner
+        spinner,
+        setSpinner
     }
 
 
