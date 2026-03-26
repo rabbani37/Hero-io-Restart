@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router";
-import useDataLoadHooks from "../../Hooks/useDataLoadHooks";
 import { IoStar } from "react-icons/io5";
 import { FaDownload } from "react-icons/fa6";
 import { Bar, CartesianGrid, ComposedChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";

@@ -44,7 +44,7 @@ const Home = () => {
                     </div>
                     {
                         !spinner && <div className="flex justify-center">
-                            <Link to={'/apps'} target="true" className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white"> Show All</Link>
+                            <Link to={'/apps'} className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white"> Show All</Link>
                         </div>
                     }
                 </div>
